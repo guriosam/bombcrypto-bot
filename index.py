@@ -343,6 +343,11 @@ def login():
         #TODO mto ele da erro e poco o botao n abre
         # time.sleep(10)
 
+    if clickBtn(images['login_button'], timeout = 10):
+        logger('🎉 Connect login button detected, logging in!')
+        login_attempts = login_attempts + 1
+
+
     if clickBtn(images['select-wallet-2'], timeout=8):
         # sometimes the sign popup appears imediately
         login_attempts = login_attempts + 1
